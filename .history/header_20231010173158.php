@@ -26,7 +26,8 @@
   <header class="header" id="header">
     <nav class="nav container">
       <a href="/#home" class="nav__logo">
-        <img src="/wp-content/uploads/Abel-logo-150x119-1.png" alt="logo">
+        <img src="/wp-content/uploads/logo-brice.jpg" alt="logo image">
+        croquembouche-wedding-cake-israel
       </a>
 
       <div class="nav__menu" id="nav-menu">
@@ -35,10 +36,13 @@
             <a href="/#home" class="nav__link active-link">Accueil</a>
           </li>
           <li class="nav__item">
-            <a href="/#permis" class="nav__link">Permis de conduire</a>
+            <a href="/#coneShaped" class="nav__link">Permis de conduire</a>
           </li>
           <li class="nav__item">
-            <a href="/#code" class="nav__link">Code de la route</a>
+            <a href="/#croquembouche" class="nav__link">Code de la route</a>
+          </li>
+          <li class="nav__item">
+            <a href="/#about" class="nav__link">Qui sommes-nous ?</a>
           </li>
         </ul>
 
@@ -47,11 +51,16 @@
         </div>
       </div>
 
-      <div class="nav__social">
-        <a href="https://www.instagram.com/bricepatisserie/" target="_blank" class="nav__social-link instagram">
-          <i class="ri-instagram-fill"></i>
-        </a>
-      </div>
+      <ul class="nav__social">
+        <li>
+          <a href="https://www.facebook.com/BricePatisserieJerusalem?mibextid=LQQJ4d" target="_blank" class="nav__social-link facebook">
+            <i class="ri-facebook-circle-fill"></i>
+          </a>
+          <a href="https://www.instagram.com/bricepatisserie/" target="_blank" class="nav__social-link instagram">
+            <i class="ri-instagram-fill"></i>
+          </a>
+        </li>
+      </ul>
 
       <div class="nav__toggle" id="nav-toggle">
         <i class="ri-menu-line"></i>

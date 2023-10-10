@@ -4,14 +4,7 @@
   "description": "wp theme",
   "main": "index.js",
   "scripts": {
-    "start": "npm run sass:watch",
-    "build": "npm run css:build & npm run js:build",
-    "sass:watch": "sass --watch assets/sass/style.scss:style.css",
-    "css:build": "sass --style=compressed assets/sass/style.scss:style.min.css",
-    "postcss": "postcss style.css > style.min.css",
-    "babel": "babel --presets=@babel/preset-env assets/js/app.js -o assets/js/app.min.js",
-    "terser": "terser assets/js/app.min.js -o assets/js/app.min.js",
-    "js:build": "npm run babel && npm run terser"
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
