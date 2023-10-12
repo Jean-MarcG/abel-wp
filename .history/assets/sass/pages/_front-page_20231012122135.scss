@@ -1,0 +1,164 @@
+/* dev */
+#wpadminbar { display: none; }
+
+.home {
+  position: relative;
+  background-image: url('/wp-content/uploads/hero-bg-abel-min.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+  
+  .hero{
+    &__container {
+      display: flex;
+      align-items: center;
+      justify-items: center;
+      justify-content: center;
+      margin-top: 20%;
+    }
+    &__content { margin-left: 1rem; text-align: center; }
+  &__title { 
+    font-family: "Georama";
+    font-weight: 1000;
+    font-size: 4rem;
+    color: $white;
+    text-transform: uppercase;
+    margin-top: 1rem;
+
+    & span { color: $yellow; }
+    & u { color: $red-100; text-decoration: none; }
+  }
+}
+  &__img { width: 300px; justify-self: center; }
+  &__content { 
+    text-align: center;
+    & .section__subtitle { color: #DAA520; rotate: -4deg; }
+  }
+  &__title { 
+    font-size: $font-s;
+    font-family: $font-title;
+    font-weight: 700;
+    letter-spacing: 1px;
+    color: $offWhite;
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+    
+    & div {
+      display: flex;
+      align-items: center;
+      justify-content: center;column-gap: .5rem;
+    }
+  }
+  &__description {
+    padding: 0 1rem;
+    font-family: "Georama";
+    font-size: 1.1rem;
+    font-weight: 800;
+    color: $yellow;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+}
+
+.formation,
+.package,
+.customized,
+.israel,
+.about { 
+  position: relative;
+  &__container { row-gap: 4rem; }
+  &__content { 
+    text-align: center;
+    & .section__subtitle { color: $red-100; rotate: -4deg; }
+  }
+  &__title { 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    column-gap: .5rem;
+    font-family: $font-title;
+    color: $white;
+    font-size: $font-ml;
+    text-transform: uppercase;
+  }
+  &__description { padding: 0 1rem; margin-bottom: 2.5rem;  }
+  &__img { width: 350px; justify-self: center; }
+}
+
+.numberCake {
+  &__container { position: relative; }
+  &__content { 
+    text-align: center;
+    & .section__subtitle { color: #DAA520; rotate: -4deg; }
+  }
+  &__content {
+    position: relative;
+    background-color: hsl(19, 24%, 15%);
+    border-radius: 2.5rem;
+    padding: 5rem 1rem 3rem;
+    overflow: hidden;
+    margin-bottom: 2rem;
+  }
+  &__img { width: 350px; justify-self: center; rotate: 10deg; }
+  &__content .section__subtitle { margin-bottom: 2rem; }
+  &__content .section__title { color: $white; margin-bottom: 2rem; }
+  &__description { margin-bottom: 2rem; color: $white; }
+}
+
+.formation {
+  position: relative;
+  background: #EC9785;
+
+  &__container { 
+    grid-template-columns: repeat(2, 1fr);
+    margin-bottom: 2rem;
+    &:first-child { margin-bottom: 2rem; }
+  }
+  &__description p { 
+    font-family: $font-primary;
+    font-size: $font-s;
+    color: $white;
+    text-align: left;
+    margin-bottom: 1rem;
+  }
+  &__content { margin-bottom: 2rem; }
+  &__img-right { border-top-left-radius: 150px; }
+  &__img-left { border-bottom-left-radius: 150px; }
+  &__cta { justify-content: center; margin-block: 3rem; }
+  &__badge {
+    position: absolute;
+    bottom: 5%;
+    right: 5%;
+  }
+}
+
+.package {
+  background: #E0F2FE;
+  &__title,
+  &__subtitle { 
+    color: $red-100;
+  }
+  &__subtitle { margin-bottom: 2rem; }
+  &__cards {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    align-items: center;
+    justify-content: center;
+  }
+  &__card {
+    border: 2px solid $red-100;
+    width: 350px;
+    padding: 5%;
+    border-radius: 8px;
+    color: $red-100;
+    &--title {
+      font-family: $font-title;
+      font-size: $font-sm;
+      font-weight: $medium;
+      text-transform: uppercase;
+      margin-bottom: 2rem;
+    }
+  }
+}
+
