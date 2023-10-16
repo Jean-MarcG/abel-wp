@@ -1,0 +1,218 @@
+/* dev */
+#wpadminbar { display: none; }
+
+.home {
+  position: relative;
+  background-image: url('/wp-content/uploads/hero-bg-abel-min.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+  
+  .hero{
+    &__container {
+      display: flex;
+      align-items: center;
+      justify-items: center;
+      justify-content: center;
+      margin-top: 20%;
+    }
+    &__content { margin-left: 1rem; text-align: center; }
+  &__title { 
+    font-family: "Georama";
+    font-weight: 1000;
+    font-size: 4rem;
+    color: $white;
+    text-transform: uppercase;
+    margin-top: 1rem;
+
+    & span { color: $yellow; }
+    & u { color: $red-100; text-decoration: none; }
+  }
+}
+  &__img { width: 300px; justify-self: center; }
+  &__content { 
+    text-align: center;
+    & .section__subtitle { color: #DAA520; rotate: -4deg; }
+  }
+  &__title { 
+    font-size: $font-s;
+    font-family: $font-title;
+    font-weight: 700;
+    letter-spacing: 1px;
+    color: $offWhite;
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+    
+    & div {
+      display: flex;
+      align-items: center;
+      justify-content: center;column-gap: .5rem;
+    }
+  }
+  &__description {
+    padding: 0 1rem;
+    font-family: "Georama";
+    font-size: 1.1rem;
+    font-weight: 800;
+    color: $yellow;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+}
+
+.formation,
+.package,
+.forward,
+.israel,
+.about { 
+  position: relative;
+  &__container { row-gap: 4rem; }
+  &__content { 
+    text-align: center;
+    & .section__subtitle { color: $red-100; rotate: -4deg; }
+  }
+  &__title { 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    column-gap: .5rem;
+    font-family: $font-title;
+    color: $white;
+    font-size: $font-ml;
+    text-transform: uppercase;
+  }
+  &__description { padding: 0 1rem; margin-bottom: 2.5rem;  }
+  &__img { width: 350px; justify-self: center; }
+}
+
+.formation {
+  position: relative;
+  background: #EC9785;
+
+  &__container { 
+    grid-template-columns: repeat(2, 1fr);
+    margin-bottom: 2rem;
+  }
+  &__description p { 
+    font-family: $font-primary;
+    font-size: $font-s;
+    color: $white;
+    text-align: left;
+    margin-bottom: 1rem;
+  }
+  &__content { margin-bottom: 2rem; }
+  &__img-right { border-top-left-radius: 150px; }
+  &__img-left { border-bottom-left-radius: 150px; }
+  &__cta { justify-content: center; margin-block: 3rem; }
+  &__badge {
+    position: absolute;
+    bottom: 5%;
+    right: 5%;
+  }
+}
+
+.package {
+  background: #E0F2FE;
+  &__title,
+  &__subtitle { 
+    color: $red-100;
+  }
+  &__subtitle { margin-bottom: 2rem; }
+  &__cards {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    align-items: center;
+    justify-content: center;
+  }
+  &__card {
+    border: 2px solid $red-100;
+    width: 350px;
+    height: 300px;
+    padding: 5%;
+    border-radius: 8px;
+    color: $red-100;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    &--title {
+      font-family: $font-title;
+      font-size: $font-sm;
+      font-weight: 1000;
+      text-transform: uppercase;
+      margin-bottom: 2rem;
+    }
+    &--content p {
+      text-transform: uppercase;
+      font-size: $font-s;
+      font-weight: $medium;
+    }
+    &--cta { margin-top: 2rem;}
+  }
+  &__cta { justify-content: center; margin-block: 3rem; }
+}
+
+.forward {
+  &.section { padding-block: 0; }
+  &__container {
+    grid-template-columns: 50% 50%;
+    &.grid { grid-gap: 0;}
+    &.container { padding: 0; padding-inline: 0; margin-inline: 0; }
+  }
+  &__content { 
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    margin: auto;
+    width: 80%;
+  }
+  &__title h2{
+    font-family: $font-title;
+    color: $red-100;
+    font-size: 1.6rem;
+    font-weight: $medium;
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+  }
+  &__description { padding: 0; margin-bottom: 1rem; }
+  &__img { width: auto; }
+}
+
+
+.agences {
+  background-color: #EAC05F;
+  text-align: center;
+  &__container { 
+    position: relative;
+    display: grid;
+    grid-template-columns: 50% 50%;
+  }
+  &__content {
+    position: relative;
+    padding: 2rem;
+    overflow: hidden;
+    text-align: center;
+  }
+  & h2{
+    font-family: $font-title;
+    color: $red-100;
+    font-size: 1.6rem;
+    font-weight: 1000;
+    text-transform: uppercase;
+    margin-bottom: 4rem;
+  }
+  &__description { margin-bottom: 2rem; color: $white; }
+  &--title {
+    color: $red-100;
+    font-size: 1.2rem;
+    font-weight: 1000;
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+  }
+  &--adresses {
+    color: $red-100;
+    font-size: 0.9rem;
+  }
+}
+
