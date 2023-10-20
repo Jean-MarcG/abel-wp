@@ -387,13 +387,11 @@ button, .cta {
 @media (min-width: 767px) {
   .container {
     display: grid;
-    padding-inline: 5%;
   }
 }
 
 .grid {
   display: grid;
-  gap: 1.5rem;
 }
 
 .section {
@@ -428,6 +426,7 @@ button, .cta {
   background-repeat: no-repeat;
   background-size: cover;
   height: 100vh;
+  margin-top: -4rem;
 }
 .hero .mustache {
   position: absolute;
@@ -437,26 +436,28 @@ button, .cta {
   width: 110px;
 }
 .hero__container {
+  position: absolute;
+  bottom: 25vh;
   display: flex;
   align-items: center;
   justify-items: center;
   justify-content: center;
-  margin-top: 20%;
+  margin-top: 50%;
 }
 .hero__content {
-  margin-left: 1rem;
   text-align: center;
+  text-wrap: balance;
 }
 .hero__subtitle {
   font-family: "Georama";
   font-weight: 1000;
-  font-size: 4rem;
+  font-size: 3rem;
   color: #FFFFFF;
   text-transform: uppercase;
   margin-top: 1rem;
 }
 .hero__subtitle span {
-  color: #FFED00;
+  color: #F2E205;
 }
 .hero__subtitle u {
   color: #D93513;
@@ -466,9 +467,6 @@ button, .cta {
   width: 300px;
   justify-self: center;
 }
-.hero__content {
-  text-align: center;
-}
 .hero__title {
   font-size: 1rem;
   font-family: "Georama";
@@ -476,6 +474,7 @@ button, .cta {
   letter-spacing: 1px;
   color: #E6DDD0;
   text-transform: uppercase;
+  text-wrap: balance;
   margin-bottom: 1rem;
 }
 .hero__title div {
@@ -487,9 +486,9 @@ button, .cta {
 .hero__description {
   padding: 0 1rem;
   font-family: "Georama";
-  font-size: 1.1rem;
+  font-size: 0.9rem;
   font-weight: 800;
-  color: #D93513;
+  color: #F2E205;
   text-transform: uppercase;
   letter-spacing: 1px;
   text-align: center;
@@ -497,58 +496,43 @@ button, .cta {
 
 .formation,
 .package,
-.forward,
-.israel,
-.about {
+.forward {
   position: relative;
-}
-.formation__container,
-.package__container,
-.forward__container,
-.israel__container,
-.about__container {
-  row-gap: 4rem;
 }
 .formation__content,
 .package__content,
-.forward__content,
-.israel__content,
-.about__content {
+.forward__content {
   text-align: center;
 }
 .formation__content .section__subtitle,
 .package__content .section__subtitle,
-.forward__content .section__subtitle,
-.israel__content .section__subtitle,
-.about__content .section__subtitle {
+.forward__content .section__subtitle {
   color: #D93513;
   rotate: -4deg;
 }
 .formation__title,
 .package__title,
-.forward__title,
-.israel__title,
-.about__title {
+.forward__title {
   font-family: "Georama";
   color: #FFFFFF;
   font-size: 2.5rem;
+  font-weight: 700;
   text-transform: uppercase;
+  text-wrap: balance;
 }
 .formation__description,
 .package__description,
-.forward__description,
-.israel__description,
-.about__description {
+.forward__description {
   padding: 0 1rem;
   margin-bottom: 2.5rem;
 }
 .formation__img,
 .package__img,
-.forward__img,
-.israel__img,
-.about__img {
+.forward__img {
+  order: 2;
   width: 350px;
   justify-self: center;
+  padding-block: 2rem;
 }
 
 .formation {
@@ -565,31 +549,30 @@ button, .cta {
 .formation__description {
   padding: 0;
   margin-bottom: 0;
-}
-.formation__description p {
   font-family: "DMSans";
   font-size: 1rem;
   color: #FFFFFF;
   text-align: left;
-  margin-bottom: 1rem;
-}
-.formation__content {
-  margin-bottom: 2rem;
+  line-height: 150%;
 }
 .formation__img-right {
   border-top-left-radius: 150px;
+  border-bottom-right-radius: 150px;
 }
 .formation__img-left {
   border-bottom-left-radius: 150px;
 }
 .formation__cta {
+  display: flex;
   justify-content: center;
-  margin-block: 3rem;
+  margin-block: 6rem;
 }
 .formation__badge {
   position: absolute;
-  bottom: 5%;
+  bottom: 11%;
   right: 5%;
+  z-index: 99;
+  width: 140px;
 }
 
 .package {
@@ -606,20 +589,19 @@ button, .cta {
 .package__subtitle {
   margin-bottom: 2rem;
 }
-.package__cards {
+.package__card--wrapper {
   display: grid;
   grid-template-columns: auto;
   grid-gap: 2rem;
   align-items: center;
   justify-items: center;
 }
-.package__cards:first-child {
-  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
-}
 .package__card {
+  position: relative;
   border: 2px solid #D93513;
-  width: 350px;
+  width: 300px;
   height: 300px;
+  margin-bottom: 2rem;
   padding: 5%;
   border-radius: 8px;
   color: #D93513;
@@ -633,19 +615,23 @@ button, .cta {
   font-size: 1.25rem;
   font-weight: 1000;
   text-transform: uppercase;
-  margin-bottom: 2rem;
+  margin-bottom: 1rem;
 }
 .package__card--content p {
   text-transform: uppercase;
   font-size: 1rem;
   font-weight: 500;
 }
-.package__card--cta {
-  margin-top: 2rem;
-}
 .package__cta {
+  display: grid;
   justify-content: center;
   margin-block: 3rem;
+}
+.package__badgeConduite {
+  position: absolute;
+  top: -60px;
+  right: -5px;
+  width: 114px;
 }
 
 .forward.section {
@@ -667,7 +653,7 @@ button, .cta {
   flex-direction: column;
   text-align: left;
   margin: auto;
-  width: 80%;
+  padding: 1rem;
 }
 .forward__title {
   display: block;
@@ -687,7 +673,8 @@ button, .cta {
   font-weight: 400;
 }
 .forward__img {
-  width: auto;
+  width: 100%;
+  height: 100%;
 }
 
 .agences {
@@ -700,7 +687,6 @@ button, .cta {
 .agences__container {
   position: relative;
   display: grid;
-  grid-template-columns: 50% 50%;
 }
 .agences__content {
   position: relative;
@@ -750,30 +736,35 @@ button, .cta {
   color: #D93513;
 }
 
-.scrolling-text__container {
-  position: relative;
-  width: 100%;
-  height: 15vh;
-  overflow: hidden;
-}
-.scrolling-text__content {
-  white-space: nowrap;
-  overflow: hidden;
-  position: absolute;
-  animation: scrollText 30s linear infinite;
-  color: rgba(217, 163, 132, 0.368627451);
-  font-size: 7rem;
-  font-weight: 1000;
-  letter-spacing: 0.8px;
-  padding-block: 3rem;
-}
-.scrolling-text__img {
-  position: absolute;
-  bottom: 2vh;
-  left: 37vw;
-  transform: rotate(-10deg);
-  width: 20vw;
-  z-index: 99;
+/* .scrolling-text {
+
+  &__container {
+    position: relative;
+    width: 100%;
+    height: 15vh;
+    overflow: hidden;
+  }
+  &__content {
+    white-space: nowrap;
+    overflow: hidden;
+    position: absolute;
+    animation: scrollText 30s linear infinite;
+
+    color: #d9a3845e;
+    font-size: 7rem;
+    font-weight: 1000;
+    letter-spacing: 0.8px;
+    padding-block: 3rem;
+  }
+
+  &__img {
+    position: absolute;
+    bottom: 2vh;
+    left: 37vw;
+    transform: rotate(-10deg);
+    width: 20vw;
+    z-index: 99;
+  }
 }
 
 @keyframes scrollText {
@@ -784,54 +775,42 @@ button, .cta {
     transform: translateX(-100%);
   }
 }
-.gallery__title {
-  font-size: 3rem;
-  text-align: center;
-}
-
-.grid__gallery {
-  width: 100%;
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 50px 20px;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  grid-auto-rows: 250px;
-  grid-auto-flow: dense;
-  grid-gap: 20px;
-}
-.grid__gallery .grid__item {
-  position: relative;
-  background-color: #FFFFFF;
+*/
+.scrolling-text__wrapper {
+  box-sizing: border-box;
   overflow: hidden;
-}
-.grid__gallery .grid__item img {
+  height: 63px;
   width: 100%;
+  background-color: #d354ff;
+}
+.scrolling-text__inner-wrapper {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  justify-content: space-around;
   height: 100%;
-  object-fit: cover;
-  transition: transform 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);
+  padding-left: 100%;
+  -webkit-animation: marquee 8s linear infinite;
+  animation: marquee 8s linear infinite;
 }
-.grid__gallery .grid__item:hover img {
-  transform: scale(1.1);
-}
-.grid__gallery .grid__item a {
-  cursor: zoom-in;
-}
-.grid__gallery .grid__item:nth-child(3n-2) {
-  grid-column: span 2;
-  grid-row: span 2;
-}
-@media (max-width: 767px) {
-  .grid__gallery {
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    grid-auto-rows: 250px;
-  }
-  .grid__gallery .grid__item:nth-child(3n-2) {
-    grid-column: unset;
-    grid-row: unset;
-  }
+.scrolling-text__inner-wrapper span {
+  color: #ffffff;
+  font-size: 33px;
+  line-height: 39.6px;
+  font-weight: 400;
+  letter-spacing: -1px;
+  margin-left: 20px;
+  white-space: nowrap;
 }
 
+@keyframes marquee {
+  0% {
+    transform: translate(0, 0);
+  }
+  100% {
+    transform: translate(-100%, 0);
+  }
+}
 .cta {
   display: inline-flex;
   align-items: center;
@@ -841,6 +820,7 @@ button, .cta {
   border-radius: 4rem;
   color: #FFFFFF;
   font-weight: 500;
+  box-shadow: 0 5px 15px 0 rgba(0, 0, 0, 0.15);
   transition: background 0.3s;
 }
 .cta i {
@@ -857,7 +837,7 @@ button, .cta {
   background: #D93513;
 }
 .cta--yellow {
-  background: #FFED00;
+  background: #F2E205;
   color: #D93513;
 }
 
@@ -905,7 +885,8 @@ button, .cta {
   position: absolute;
   background-color: transparent;
   width: 100%;
-  top: 2rem;
+  height: 90px;
+  top: 0;
   left: 0;
   z-index: 100;
   transition: box-shadow 0.3s, background 0.4s;
@@ -914,12 +895,15 @@ button, .cta {
 .nav {
   position: relative;
   height: 5rem;
-  display: flex;
+  max-width: 1310px;
+  display: grid;
+  grid-template-columns: 25% 55% 10%;
   justify-content: space-between;
   align-items: center;
   margin: auto;
   padding-top: 1rem;
   padding-bottom: 1rem;
+  justify-items: center;
   /*   &__menu {
     position: fixed;
     top: -100%;
@@ -931,24 +915,12 @@ button, .cta {
     transition: top .4s;
   } */
 }
-.nav__logo, .nav__toggle, .nav__close {
+.nav__toggle, .nav__close {
   display: flex;
   color: #000000;
 }
-.nav__logo {
-  flex-grow: 1;
-  align-items: center;
-  column-gap: 0.5rem;
-  font-family: "Georama";
-  font-weight: bold;
-  transition: color 0.3s;
-}
-.nav__logo:hover {
-  color: #545454;
-}
 .nav__logo img {
-  width: auto;
-  border-radius: 50px;
+  width: 150px;
   transition: scale 0.5s ease-in-out;
 }
 .nav__logo img:hover {
@@ -959,49 +931,36 @@ button, .cta {
   column-gap: 1.25rem;
   margin-right: 1rem;
 }
-.nav__social-link {
-  color: #000000;
-  font-size: 1.25rem;
-  transition: color 0.3s, transform 0.3s;
-}
-.nav__social-link i {
-  color: #FFFFFF;
-}
-.nav__social-link.facebook:hover {
-  color: #3B5998;
-  transform: translateY(-2px);
-}
-.nav__social-link.instagram:hover {
-  color: lightcoral;
-  transform: translateY(-2px);
+.nav__cta {
+  display: flex;
+  justify-content: flex-end;
+  width: 90%;
 }
 .nav__toggle {
   font-size: 1.25rem;
   cursor: pointer;
+  border-radius: 50px;
+  background-color: rgba(255, 255, 255, 0.4);
+  padding: 16px;
+  height: 47px;
+  align-items: center;
+  justify-content: center;
 }
 .nav__toggle i {
   color: #FFFFFF;
-}
-@media (max-width: 767px) {
-  .nav__menu {
-    position: fixed;
-    top: -100%;
-    left: 0;
-    background-color: #FFFAF7;
-    width: 100%;
-    box-shadow: 0 8px 20px hsla(19, 64%, 24%, 0.1);
-    padding-block: 3.5rem;
-    transition: top 0.4s;
-  }
 }
 .nav__list {
   display: flex;
   flex-direction: column;
   text-align: center;
   row-gap: 2rem;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
 }
 .nav__link {
   color: #FFFFFF;
+  font-size: 35px;
   font-weight: 500;
   transition: color 0.4s;
 }
@@ -1031,11 +990,6 @@ button, .cta {
   right: 1.5rem;
   font-size: 1.5rem;
   cursor: pointer;
-}
-
-/* Show menu */
-.show-menu {
-  top: 0;
 }
 
 /* Change background header */
@@ -1089,30 +1043,28 @@ button, .cta {
   padding-block: 3rem 2rem;
   overflow: hidden;
 }
-.footer__description, .footer__link, .footer__information {
-  font-size: 1rem;
-  color: #000000;
-}
 .footer h4 {
   font-family: "Georama";
   color: #D93513;
-  font-size: 4.5vw;
+  font-size: 9.5vw;
   font-weight: 900;
   margin-block: 3.5rem;
 }
 .footer__form {
   display: grid;
-  grid-template-columns: 25% 25% 50%;
+}
+.footer__form > div {
+  padding-bottom: 1rem;
 }
 .footer__form p, .footer__form a {
   color: #D93513;
 }
-.footer__form-adress {
-  text-align: end;
+.footer__form-mail p, .footer__form-social p {
+  text-decoration: underline;
 }
 .footer__after .container {
-  display: block;
-  text-align: center;
+  display: grid;
+  justify-items: center;
 }
 .footer__after span {
   color: #D93513;
@@ -1157,6 +1109,12 @@ button, .cta {
   .home__title {
     font-size: 2rem;
   }
+  .package__title {
+    font-size: 1.85rem;
+  }
+  .agences h2 {
+    padding: 10px;
+  }
   .footer__content {
     gap: 1.5rem;
   }
@@ -1176,6 +1134,94 @@ button, .cta {
   }
 }
 @media (min-width: 767px) {
+  .hero__container {
+    margin-top: 20%;
+  }
+  .hero__subtitle {
+    font-size: 4rem;
+  }
+  .hero__description, .hero__title {
+    font-size: 1.1rem;
+  }
+  .formation__container,
+  .forward__container,
+  .agences__container {
+    grid-template-columns: 50% 50%;
+    align-items: center;
+    justify-content: center;
+  }
+  .formation .section__subtitle, .formation .section__title,
+  .forward .section__subtitle,
+  .forward .section__title,
+  .agences .section__subtitle,
+  .agences .section__title {
+    text-align: initial;
+  }
+  .formation__container {
+    grid-template-columns: 50% 5% 45%;
+  }
+  .formation__description {
+    margin-bottom: 1rem;
+    padding: 0;
+    text-align: justify;
+  }
+  .formation__img {
+    order: 0;
+  }
+  .formation__badge {
+    bottom: -4%;
+    width: auto;
+  }
+  .package__card--wrapper {
+    grid-template-columns: 50% 50%;
+  }
+  .forward__img {
+    padding-block: 0;
+  }
+  .forward__img--one {
+    order: 0;
+  }
+  .agences__container {
+    grid-template-columns: 50% 50%;
+  }
+  .agences__content {
+    min-height: 240px;
+  }
+  .footer h4 {
+    font-size: 3.5vw;
+  }
+  .footer__form {
+    grid-template-columns: 25% 25% 50%;
+  }
+  .footer__form-adress {
+    text-align: end;
+  }
+  .footer__after .container {
+    grid-template-columns: 58% 16% 26%;
+    align-items: center;
+  }
+}
+/* Large devices */
+@media (max-width: 63.9375em) {
+  .nav {
+    /* Show menu */
+  }
+  .nav__menu {
+    position: fixed;
+    top: -100%;
+    left: 0;
+    background-color: #F2E205;
+    width: 100%;
+    box-shadow: 0 8px 20px hsla(19, 64%, 24%, 0.1);
+    padding-block: 3.5rem;
+    transition: top 0.4s;
+  }
+  .nav .show-menu {
+    top: 0;
+    height: 50vh;
+  }
+}
+@media (min-width: 64em) {
   .nav {
     column-gap: 3rem;
   }
@@ -1189,55 +1235,6 @@ button, .cta {
   .nav__close, .nav__toggle {
     display: none;
   }
-  .formation__container,
-  .forward__container,
-  .agences__container {
-    grid-template-columns: 50% 50%;
-    align-items: center;
-    justify-content: center;
-  }
-  .formation__data,
-  .forward__data,
-  .agences__data {
-    order: 1;
-  }
-  .formation__data, .formation .section__subtitle, .formation .section__title,
-  .forward__data,
-  .forward .section__subtitle,
-  .forward .section__title,
-  .agences__data,
-  .agences .section__subtitle,
-  .agences .section__title {
-    text-align: initial;
-  }
-  .formation__title div,
-  .forward__title div,
-  .agences__title div {
-    column-gap: 1rem;
-    justify-content: initial;
-  }
-  .formation__description,
-  .forward__description,
-  .agences__description {
-    padding-inline: 0 5rem;
-  }
-  .formation__img,
-  .forward__img,
-  .agences__img {
-    width: 450px;
-  }
-  .package__cards {
-    grid-template-columns: 50% 50%;
-  }
-  .agences__content {
-    min-height: 200px;
-  }
-  .footer__content {
-    grid-template-columns: repeat(4, max-content);
-  }
-}
-/* Large devices */
-@media (min-width: 64em) {
   .section {
     padding-block: 6rem 1.5rem;
   }
@@ -1246,7 +1243,6 @@ button, .cta {
   }
   .hero__container {
     position: relative;
-    /*     padding-block: 7rem 3rem; */
   }
   .hero__data {
     text-align: initial;
@@ -1262,56 +1258,6 @@ button, .cta {
     top: 0;
     right: 2rem;
   }
-  .formation__container,
-  .package__container,
-  .forward__container,
-  .agences__container {
-    grid-template-columns: 50% 50%;
-    align-items: center;
-    justify-content: center;
-  }
-  .formation__data,
-  .package__data,
-  .forward__data,
-  .agences__data {
-    order: 1;
-  }
-  .formation__data, .formation .section__subtitle, .formation .section__title,
-  .package__data,
-  .package .section__subtitle,
-  .package .section__title,
-  .forward__data,
-  .forward .section__subtitle,
-  .forward .section__title,
-  .agences__data,
-  .agences .section__subtitle,
-  .agences .section__title {
-    text-align: initial;
-  }
-  .formation__title div,
-  .package__title div,
-  .forward__title div,
-  .agences__title div {
-    column-gap: 1rem;
-    justify-content: initial;
-  }
-  .formation__description,
-  .package__description,
-  .forward__description,
-  .agences__description {
-    padding-inline: 0 5rem;
-  }
-  .formation__img,
-  .package__img,
-  .forward__img,
-  .agences__img {
-    width: 450px;
-  }
-  .croquembouche__data,
-  .numberCake__data,
-  .about__data {
-    order: -1;
-  }
   .footer {
     padding-block: 8rem 3rem;
   }
@@ -1325,6 +1271,9 @@ button, .cta {
   }
   .footer__title, .footer__description, .footer__link, .footer__information {
     font-size: 1rem;
+  }
+  .footer h4 {
+    font-size: 3vw;
   }
   .footer__social-link {
     font-size: 1.5rem;
