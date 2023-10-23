@@ -1,0 +1,25 @@
+/*
+Theme Name: Abel WP
+Author: JM@2212
+Version: 1.0
+License: GNU General Public License v3 or later
+License URI: http://www.gnu.org/licenses/gpl-3.0.html
+*/
+@import "config/variables";
+@import "config/colors";
+@import "config/fonts";
+@import "config/normalize";
+@import "config/base";
+
+@import "theme/layout";
+
+@import "pages/front-page.scss";
+@import "pages/permis";
+
+
+@import "components/buttons";
+@import "components/scroll";
+@import "components/header";
+@import "components/footer";
+@import "components/links";
+@import "components/breakpoints";

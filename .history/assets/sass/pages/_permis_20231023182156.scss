@@ -1,0 +1,17 @@
+.permisPresentation {
+  background: #052537;
+  & h1 {
+    font-family: $font-title;
+    color: $white;
+    padding-top: 10vh;
+  }
+  & p { color: $white; }
+  &__cta { margin-top: 20px; }
+}
+
+.permis {
+  background: #37997d;
+  color: $white;
+
+}
+

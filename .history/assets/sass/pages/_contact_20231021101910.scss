@@ -1,0 +1,176 @@
+.contact {
+  margin-top: -100px;
+  &__left {
+    display: grid;
+    align-items: center;
+    justify-items: center;
+    margin: -8rem 0 0;
+    background: #D9A384;
+        &  div { padding: 1rem; }
+  }
+    &__title { 
+      font-size: $font-med; 
+      & p, a {
+        color: $white;
+        text-align: center;
+        margin-top: 20px;
+      }
+    }
+
+  & button {
+    transition-duration: 0.5s;
+    display: inline-block;
+    border: 1px solid hsla(0, 0%, 100%, 0.2);
+    border-radius: 4px;
+    padding: 15px 25px;
+  }
+  &__form form {
+    padding: 70px;
+    transition: 225ms;
+  }
+}
+
+
+
+@media (min-width: 992px) {
+  .contact__left div {
+    padding: 4rem;
+  }
+}
+@media (min-width: 1024px) {
+  .contact__left div {
+    padding: 5rem;
+  }
+}
+
+@media (min-width: 1023px) {
+  .contact {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .contact__left {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    height: 100vh;
+  }
+  .contact__right {
+    margin: 7rem 0 0;
+  }
+}
+@media (max-width: 1022px) {
+  .contact__left {
+    padding: 12rem 0 5rem;
+  }
+}
+
+
+@media (max-width: 1024px) {
+  .contact__form form {
+    padding: 50px;
+  }
+}
+@media (max-width: 1000px) {
+  .contact__form form {
+    padding: 25px;
+  }
+}
+.contact__form form label {
+  padding: 0;
+  cursor: pointer;
+  font-size: 1rem;
+}
+.contact__form form input,
+.contact__form form textarea {
+  border-radius: 5px;
+}
+.contact__form form .cta input {
+  padding: 6px 15px;
+  border-radius: 5px;
+}
+.contact__form form input[name="your-name"],
+.contact__form form input[name="your-subject"],
+.contact__form form input[name="tel-334"],
+.contact__form form input[type="email"],
+.contact__form form textarea,
+.contact__form form select {
+  display: block;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.1);
+  padding: 10px;
+}
+.contact__form form input[type="checkbox"] {
+  display: inline-block;
+  width: 18px;
+  height: 18px;
+  margin: 0 6px 0 0;
+  border-radius: 2px;
+  background: var(--blue);
+}
+.contact__form form input[type="checkbox"]:checked {
+  background: var(--cyanBlue)
+    url("/wp-content/themes/jamal/assets/images/checked.svg") 0 2px no-repeat;
+}
+.contact__form .jz_checkbox {
+  padding: 10px 0 0;
+}
+.jz_checkbox label {
+  display: flex;
+  align-items: center;
+}
+.contact__form form .jz_submit {
+  margin: 50px 0 20px;
+}
+
+.contact__form form [type="submit"] {
+  border-radius: 100px;
+  padding: 20px 35px 23px;
+  font-size: 20px;
+  background: var(--blue);
+  color: var(--offWhite);
+  transition: all 0.2s linear;
+}
+
+.contact__form form [type="submit"]:hover {
+  background: var(--offWhite);
+  color: var(--blue);
+}
+
+.contact__form form small {
+  font-size: 12px;
+  text-align: center;
+  display: block;
+  line-height: 1.3;
+  padding: 0 40px;
+}
+
+form.wpcf7-form input:hover,
+form.wpcf7-form select:hover,
+form.wpcf7-form textarea:hover {
+  cursor: pointer; /* Transforme le curseur en main au survol */
+  box-shadow: 0 0 2px var(--cyanBlue); /* Ombre autour de la case au survol */
+}
+
+form.wpcf7-form input:focus,
+form.wpcf7-form select:focus,
+form.wpcf7-form textarea:focus {
+  border: 2px solid var(--blue); /* Bordure de la case sélectionnée */
+  outline: none; /* Supprime l'effet de halo */
+}
+
+form.wpcf7-form input[type="submit"]:hover {
+  background-color: #010f18; /* Couleur de fond du bouton au survol */
+  text-decoration: none; /* Supprime soulignement */
+}
+
+span.wpcf7-not-valid-tip {
+  color: #38abf9; /* Couleur du texte d'erreur */
+  font-size: 15px; /* Gère la taille du texte d'erreur */
+  margin-top: 5px; /* Marge en haut du texte d'erreur */
+}
+div.wpcf7-response-output {
+  padding: 1em !important;
+  margin: 0 !important;
+}
+
+

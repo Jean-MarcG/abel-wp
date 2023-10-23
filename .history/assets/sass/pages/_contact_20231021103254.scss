@@ -1,0 +1,32 @@
+.contact {
+  margin-top: -50px;
+  &__left {
+    display: grid;
+    align-items: center;
+    justify-items: center;
+    place-items: center;
+    margin: -8rem 0 0;
+    background: #D9A384;
+    color: $white;
+    &  div { padding: 1rem; }
+    & p, a {
+      color: $white;
+      text-align: center;
+      margin-top: 20px;
+    }
+    &__title { font-size: $font-med; }
+  }
+  & button {
+    transition-duration: 0.5s;
+    display: inline-block;
+    border: 1px solid hsla(0, 0%, 100%, 0.2);
+    border-radius: 4px;
+    padding: 15px 25px;
+  }
+  &__form form {
+    padding: 70px;
+    transition: 225ms;
+  }
+}
+
+

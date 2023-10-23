@@ -1,0 +1,19 @@
+// Breakpoints
+
+// min-width => 340px, 640px, 768px, 1024px, 1400px
+$breakpoints-min: ("small": "340px","medium": "576px","tablet": "767px", "large": "1024px", "xlarge": "1400px", "xxlarge": "1696px");
+
+// max-width => phone = 384px, small = 639px, tablet = 767px, large = 1023px, xlarge= = 1399px
+$breakpoints-max: ("small": "384px","medium": "639px","tablet": "767px", "large": "1023px", "xlarge": "1399px");
+
+@mixin breakpoint-min($size){
+  @media (min-width: map-get($breakpoints-min, $size)){
+    @content;
+  }
+}
+
+@mixin breakpoint-max($size){
+  @media (max-width: map-get($breakpoints-max, $size)){
+    @content;
+  }
+}
