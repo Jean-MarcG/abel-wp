@@ -454,51 +454,11 @@ button, .cta {
   scale: 1.05;
 }
 
-/*=============== SCROLL BAR ===============*/
-::-webkit-scrollbar {
-  width: 0.6rem;
-  border-radius: 0.5rem;
-  background-color: hsl(19, 8%, 75%);
-}
-::-webkit-scrollbar-thumb {
-  border-radius: 0.5rem;
-  background-color: hsl(19, 8%, 65%);
-}
-::-webkit-scrollbar-thumb:hover {
-  background-color: hsl(19, 8%, 55%);
-}
-
-/*=============== SCROLL UP ===============*/
-.scrollup {
-  position: fixed;
-  right: 1rem;
-  bottom: -50%;
-  background-color: #E6DDD0;
-  box-shadow: 0 4px 12px hsla(19, 64%, 24%, 0.1);
-  display: inline-flex;
-  padding: 0.35rem;
-  border-radius: 0.25rem;
-  font-size: 1.1rem;
-  color: #000000;
-  z-index: 100;
-  opacity: 0.8;
-  transition: bottom 0.3s, transform 0.3s, background 0.4s;
-}
-.scrollup:hover {
-  opacity: 1;
-  transform: translateX(-0.25rem);
-}
-
-/* Show Scroll Up*/
-.show-scroll {
-  bottom: 3rem;
-}
-
 .header {
   position: fixed;
   background-color: transparent;
   width: 100%;
-  height: 9rem;
+  height: 110px;
   top: 0;
   left: 0;
   z-index: 100;
@@ -733,12 +693,14 @@ button, .cta {
 .hero__content {
   text-align: center;
   text-wrap: balance;
+  padding: 0 20px;
 }
 .hero__subtitle {
   font-family: "Georama";
-  font-weight: 1000;
+  font-weight: 900;
   font-size: 3rem;
   color: #FFFFFF;
+  line-height: 1;
   text-transform: uppercase;
 }
 .hero__subtitle span {
@@ -960,6 +922,7 @@ button, .cta {
 .forward__img {
   width: 100%;
   height: 100%;
+  padding-block: 0;
 }
 
 .agences {
@@ -1021,52 +984,13 @@ button, .cta {
   color: #D93513;
 }
 
-/* .scrolling-text {
-
-  &__container {
-    position: relative;
-    width: 100%;
-    height: 15vh;
-    overflow: hidden;
-  }
-  &__content {
-    white-space: nowrap;
-    overflow: hidden;
-    position: absolute;
-    animation: scrollText 30s linear infinite;
-
-    color: #d9a3845e;
-    font-size: 7rem;
-    font-weight: 1000;
-    letter-spacing: 0.8px;
-    padding-block: 3rem;
-  }
-
-  &__img {
-    position: absolute;
-    bottom: 2vh;
-    left: 37vw;
-    transform: rotate(-10deg);
-    width: 20vw;
-    z-index: 99;
-  }
-}
-
-@keyframes scrollText {
-  0% {
-    transform: translateX(100%);
-  }
-  100% {
-    transform: translateX(-100%);
-  }
-}
-*/
+/* Scrolling text */
 .scrolling-text__wrapper {
   box-sizing: border-box;
   overflow: hidden;
-  height: 63px;
+  height: 100px;
   width: 100%;
-  background-color: #d354ff;
+  background-color: #E0F2FE;
 }
 .scrolling-text__inner-wrapper {
   display: flex;
@@ -1076,11 +1000,11 @@ button, .cta {
   height: 100%;
   padding-left: 100%;
   -webkit-animation: marquee 8s linear infinite;
-  animation: marquee 8s linear infinite;
+  animation: marquee 20s linear infinite;
 }
 .scrolling-text__inner-wrapper span {
-  color: #ffffff;
-  font-size: 33px;
+  color: #37997d;
+  font-size: 90px;
   line-height: 39.6px;
   font-weight: 400;
   letter-spacing: -1px;
@@ -1099,6 +1023,7 @@ button, .cta {
 }
 .permisPresentation {
   background: #052537;
+  padding-bottom: 3rem;
 }
 .permisPresentation h1 {
   font-family: "Georama";
@@ -1107,9 +1032,7 @@ button, .cta {
 }
 .permisPresentation p {
   color: #FFFFFF;
-}
-.permisPresentation__cta {
-  margin-top: 20px;
+  padding: 0 40px 0 0;
 }
 
 .permis {
@@ -1118,10 +1041,20 @@ button, .cta {
   padding: 0 20px;
 }
 .permis h2, .permis h3, .permis h4 {
+  font-family: "Georama";
   color: #FFFFFF;
 }
 .permis h2 {
+  font-size: 45px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+.permis h3 {
   font-size: 35px;
+  font-weight: 500;
+  line-height: 1;
+  margin-bottom: 15px;
 }
 .permis li {
   list-style: disc;
@@ -1129,9 +1062,38 @@ button, .cta {
 .permis__description {
   display: block;
   line-height: 1.5;
+  border-bottom: 1px solid #FFFFFF;
+  border-radius: 5px;
 }
 .permis__description > div {
   margin-block: 20px;
+}
+.permis__description span {
+  display: block;
+}
+.permis__description p, .permis__description span {
+  padding: 0 40px 0 0;
+}
+.permis .cta {
+  margin: 20px 0;
+}
+.permis__price {
+  font-size: 30px;
+  font-weight: 500;
+}
+
+.documents {
+  padding: 0 20px;
+}
+.documents h2 {
+  font-family: "Georama";
+  font-size: 25px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+.documents li {
+  list-style: disc;
 }
 
 .contact {
@@ -1200,6 +1162,46 @@ button, .cta {
 #wpforms-submit-33 {
   background-color: #D93513;
   border-radius: 100px;
+}
+
+/*=============== SCROLL BAR ===============*/
+::-webkit-scrollbar {
+  width: 6rem;
+  border-radius: 0.5rem;
+  background-color: hsl(18, 100%, 51%);
+}
+::-webkit-scrollbar-thumb {
+  border-radius: 0.5rem;
+  background-color: hsl(19, 8%, 65%);
+}
+::-webkit-scrollbar-thumb:hover {
+  background-color: hsl(19, 8%, 55%);
+}
+
+/*=============== SCROLL UP ===============*/
+.scrollup {
+  position: fixed;
+  right: 1rem;
+  bottom: -50%;
+  background-color: #E6DDD0;
+  box-shadow: 0 4px 12px hsla(19, 64%, 24%, 0.1);
+  display: inline-flex;
+  padding: 0.35rem;
+  border-radius: 0.25rem;
+  font-size: 1.1rem;
+  color: #000000;
+  z-index: 100;
+  opacity: 0.8;
+  transition: bottom 0.3s, transform 0.3s, background 0.4s;
+}
+.scrollup:hover {
+  opacity: 1;
+  transform: translateX(-0.25rem);
+}
+
+/* Show Scroll Up*/
+.show-scroll {
+  bottom: 3rem;
 }
 
 /* Small devices */
