@@ -67,7 +67,7 @@
             <img src="/wp-content/uploads/permis-illustration-1.png" alt="">
           </div>
           <div class="package__card--cta">
-            <a href="/permis" class="cta cta--yellow">En savoir +</a>
+            <a href="#" class="cta cta--yellow">En savoir +</a>
           </div>
         </div>
         <div class="package__card package__card--right">

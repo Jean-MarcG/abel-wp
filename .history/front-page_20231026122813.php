@@ -60,6 +60,9 @@
         <br>
         adaptés à votre apprentissage
       </h2>
+      <p class="package__subtitle">
+        Évaluation préalable sur rdv à l’inscription dans le but de définir le volume de formation : séance d’évaluation 45€ ttc
+      </p>
       <div class="package__card--wrapper">
         <div class="package__card package__card--left">
           <div class="package__card--title">permis b et aac</div>
@@ -67,7 +70,7 @@
             <img src="/wp-content/uploads/permis-illustration-1.png" alt="">
           </div>
           <div class="package__card--cta">
-            <a href="/permis" class="cta cta--yellow">En savoir +</a>
+            <a href="#" class="cta cta--yellow">En savoir +</a>
           </div>
         </div>
         <div class="package__card package__card--right">

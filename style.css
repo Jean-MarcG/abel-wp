@@ -473,6 +473,7 @@ button, .cta {
 
 .nav {
   position: relative;
+  background-color: #E6292A;
   height: 5rem;
   max-width: calc(100% - 32px);
   display: grid;
@@ -1012,7 +1013,7 @@ button, .cta {
   animation: marquee 20s linear infinite;
 }
 .scrolling-text__inner-wrapper span {
-  color: #37997d;
+  color: #E6292A;
   font-size: 90px;
   line-height: 39.6px;
   font-weight: 400;
