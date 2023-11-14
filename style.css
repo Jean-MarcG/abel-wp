@@ -409,16 +409,25 @@ button, .cta {
   font-family: "DMSans";
 }
 
+.ml-5 {
+  margin-left: 5%;
+}
+
 /* For animation scroll reveal */
 .main {
   overflow: hidden;
+}
+
+/* Recaptcha */
+.grecaptcha-badge {
+  display: none;
 }
 
 .cta {
   display: inline-flex;
   align-items: center;
   column-gap: 0.5rem;
-  background-color: #dda15e;
+  background-color: #D93513;
   padding: 1rem 1.5rem 0.8rem;
   border-radius: 4rem;
   color: #FFFFFF;
@@ -426,20 +435,7 @@ button, .cta {
   box-shadow: 0 5px 15px 0 rgba(0, 0, 0, 0.15);
   transition: all 0.3s ease-in;
 }
-.cta i {
-  font-size: 1.5rem;
-  transition: transform 0.3s;
-}
-.cta:hover {
-  background-color: #443528;
-}
-.cta:hover i {
-  transform: translateX(0.25rem);
-}
-.cta--red {
-  background: #D93513;
-}
-.cta--red:hover {
+.cta :hover {
   background-color: #F2E205;
   color: #D93513;
   scale: 1.05;
@@ -455,44 +451,45 @@ button, .cta {
 }
 
 .header {
-  position: fixed;
-  background-color: transparent;
-  width: 100%;
-  height: 110px;
+  padding: 18px 10px;
+  position: -webkit-sticky;
+  position: sticky;
   top: 0;
   left: 0;
-  z-index: 100;
-  transition: box-shadow 0.3s, background 0.4s;
-}
-
-/* Change background header */
-.bg-header {
-  box-shadow: 0 2px 8px hsla(19, 64%, 24%, 0.1);
-  background-color: #052537;
+  width: 100%;
+  z-index: 4;
+  padding: 20px 25px;
+  display: grid;
+  align-items: center;
+  transition: all 0.3s, background 0.4s;
 }
 
 .nav {
   position: relative;
-  background-color: #E6292A;
-  height: 5rem;
-  max-width: calc(100% - 32px);
+  background-color: #D93513;
+  border-radius: 100px;
+  padding: 10px;
   display: grid;
-  grid-template-columns: 30% 55% 15%;
+  grid-template-columns: repeat(6, 1fr);
   justify-content: space-between;
   align-items: center;
-  margin: auto;
-  padding-top: 1rem;
   justify-items: center;
 }
 .nav__toggle, .nav__close {
   display: flex;
   color: #000000;
 }
-.nav__logo img {
-  width: 150px;
+.nav__logo {
+  grid-column-start: 1;
+  grid-column-end: 3;
+  display: flex;
+}
+.nav__logo svg {
+  width: 120px;
+  height: auto;
   transition: scale 0.5s ease-in-out;
 }
-.nav__logo img:hover {
+.nav__logo svg:hover {
   scale: 1.1;
 }
 .nav__social {
@@ -501,6 +498,8 @@ button, .cta {
   margin-right: 1rem;
 }
 .nav__cta {
+  grid-column-start: 3;
+  grid-column-end: 6;
   display: flex;
   justify-content: flex-end;
   width: 90%;
@@ -603,8 +602,22 @@ button, .cta {
 .footer {
   background-color: #F4D9D2;
   position: relative;
-  padding-block: 3rem 2rem;
+  padding-block: 30vh 2rem;
   overflow: hidden;
+}
+.footer__insta {
+  position: absolute;
+  top: 0;
+  left: 20vw;
+  width: 65vw;
+  border-radius: 10px;
+  transform: rotate(-10deg);
+}
+.footer__insta span {
+  font-family: "Georama";
+  color: #D93513;
+  font-size: 5vw;
+  font-weight: 800;
 }
 .footer h4 {
   font-family: "Georama";
@@ -625,35 +638,8 @@ button, .cta {
 .footer__form-mail p, .footer__form-social p {
   text-decoration: underline;
 }
-.footer__after .container {
-  display: grid;
-  justify-items: center;
-}
-.footer__after span {
-  color: #D93513;
-  font-size: 10vw;
-  font-weight: 700;
-}
-.footer__links {
-  row-gap: 0.5rem;
-}
-.footer__link {
-  color: #545454;
-  transition: color 0.3s;
-}
-.footer__link:hover {
-  color: #000000;
-}
-.footer__info {
-  display: flex;
-  margin-top: 6.5rem;
-  flex-direction: column;
-  row-gap: 1.5rem;
-}
-.footer__copy {
+.footer__after {
   text-align: center;
-  font-size: 1rem;
-  color: #545454;
 }
 
 /* Active link */
@@ -662,18 +648,15 @@ button, .cta {
 }
 
 /* dev */
-#wpadminbar {
-  display: none;
-}
-
+/* #wpadminbar { display: none; } */
 .hero {
   position: relative;
   background-image: url("/wp-content/uploads/hero-bg-abel-min.jpg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  height: 110vh;
-  margin-top: -10vh;
+  height: 104vh;
+  margin-top: -12rem;
   display: grid;
 }
 .hero .mustache {
@@ -814,6 +797,8 @@ button, .cta {
 }
 .formation__img-left {
   border-bottom-left-radius: 150px;
+  border-top-right-radius: 150px;
+  width: fit-content;
 }
 .formation__cta {
   display: flex;
@@ -836,11 +821,9 @@ button, .cta {
 .package__container {
   padding: 0;
 }
-.package__title, .package__subtitle {
+.package__title {
   color: #D93513;
-}
-.package__subtitle {
-  margin-bottom: 2rem;
+  margin-bottom: 3rem;
 }
 .package__card--wrapper {
   display: grid;
@@ -863,12 +846,21 @@ button, .cta {
   justify-content: center;
   align-items: center;
 }
+.package__card--left {
+  background-color: seashell;
+}
+.package__card--right {
+  background-color: rgba(30, 160, 195, 0.4588235294);
+}
 .package__card--title {
   font-family: "Georama";
   font-size: 1.25rem;
   font-weight: 1000;
   text-transform: uppercase;
   margin-bottom: 1rem;
+}
+.package__card--subtitle {
+  margin-bottom: 2rem;
 }
 .package__card--content p {
   text-transform: uppercase;
@@ -879,12 +871,6 @@ button, .cta {
   display: grid;
   justify-content: center;
   margin-block: 3rem;
-}
-.package__badgeConduite {
-  position: absolute;
-  top: -60px;
-  right: -5px;
-  width: 114px;
 }
 
 .forward.section {
@@ -919,6 +905,10 @@ button, .cta {
   text-transform: uppercase;
   margin-bottom: 1rem;
 }
+.forward__small {
+  font-size: 9px;
+  color: #D93513;
+}
 .forward__description {
   padding: 0;
   margin-bottom: 1rem;
@@ -936,7 +926,7 @@ button, .cta {
   text-align: center;
 }
 .agences.section {
-  padding-block: 5rem 0;
+  padding: 5rem 0;
 }
 .agences__container {
   position: relative;
@@ -946,24 +936,29 @@ button, .cta {
   position: relative;
   display: grid;
   align-items: center;
-  justify-items: center;
+  justify-items: stretch;
   padding: 20px;
   overflow: hidden;
   text-align: center;
+  /*     &-one { 
+        border-top: 1px solid $red-100;
+        border-right: 1px solid $red-100;
+      }
+      &-two { border-top: 1px solid $red-100; }
+      &-tree {
+        border-top: 1px solid $red-100;
+        border-right: 1px solid $red-100;
+      }
+      &-four { border-top: 1px solid $red-100;} */
 }
-.agences__content-one {
-  border-top: 1px solid #D93513;
-  border-right: 1px solid #D93513;
-}
-.agences__content-two {
-  border-top: 1px solid #D93513;
-}
-.agences__content-tree {
-  border-top: 1px solid #D93513;
-  border-right: 1px solid #D93513;
-}
-.agences__content-four {
-  border-top: 1px solid #D93513;
+.agences__content a {
+  border: 1px solid #D93513;
+  border-radius: 50px;
+  min-width: 385px;
+  padding: 20px;
+  margin: auto;
+  cursor: pointer;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
 }
 .agences h2 {
   font-family: "Georama";
@@ -971,7 +966,8 @@ button, .cta {
   font-size: 1.6rem;
   font-weight: 1000;
   text-transform: uppercase;
-  margin-bottom: 4rem;
+  padding: 0 20px;
+  margin-bottom: 2rem;
 }
 .agences__description {
   margin-bottom: 2rem;
@@ -991,7 +987,8 @@ button, .cta {
 }
 .agences--adresses a {
   color: #D93513;
-  font-weight: 500;
+  font-weight: 800;
+  cursor: pointer;
 }
 
 /* Scrolling text */
@@ -1034,8 +1031,8 @@ button, .cta {
 .permisPresentation {
   background: #052537;
   padding-bottom: 3rem;
-  padding-top: 4rem;
-  margin-top: -50px;
+  padding-top: 6rem;
+  margin-top: -17vh;
 }
 .permisPresentation h1 {
   font-family: "Georama";
@@ -1046,12 +1043,51 @@ button, .cta {
   color: #FFFFFF;
   padding: 0 40px 0 0;
   text-align: justify;
+  font-size: 20px;
 }
 
+.evaluation__wrapper {
+  display: grid;
+  text-align: center;
+  padding: 10px;
+}
+.evaluation__data {
+  margin-bottom: 20px;
+  color: #F2E205;
+  font-weight: 500;
+}
+.evaluation__data.hithere {
+  animation: hithere 3s ease infinite;
+}
+.evaluation__details {
+  font-size: 18px;
+  font-weight: 300;
+  letter-spacing: -0.5px;
+}
+
+@keyframes hithere {
+  30% {
+    transform: scale(1.2);
+  }
+  40%, 60% {
+    transform: rotate(-20deg) scale(1.2);
+  }
+  50% {
+    transform: rotate(20deg) scale(1.2);
+  }
+  70% {
+    transform: rotate(0deg) scale(1.2);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
 .permis {
   background: #37997d;
   color: #FFFFFF;
-  padding: 0 16px;
+  padding: 1rem;
+  display: block;
+  line-height: 1.5;
 }
 .permis h2, .permis h3, .permis h4 {
   font-family: "Georama";
@@ -1062,35 +1098,86 @@ button, .cta {
   font-weight: 800;
   text-transform: uppercase;
   letter-spacing: 2px;
+  text-align: center;
+  margin-bottom: 30px;
 }
 .permis h3 {
   font-size: 35px;
-  font-weight: 500;
+  font-weight: 700;
   line-height: 1;
   margin-bottom: 15px;
+}
+.permis h3 u {
+  text-transform: uppercase;
+  text-decoration: none;
+}
+.permis > div {
+  margin-block: 20px;
+}
+.permis span {
+  display: block;
+}
+.permis p, .permis span {
+  padding: 0 40px 0 0;
 }
 .permis li {
   list-style: disc;
 }
-.permis__description {
+.permis__wrapper {
+  display: grid;
+  gap: 20px;
+}
+.permis__card {
+  border: 1px solid white;
+  border-radius: 10px;
+  padding: 1rem;
+  background: #D93513;
+}
+.permis__card--content {
+  display: flex;
+  flex-direction: column;
+}
+.permis__card--content ul {
+  margin-bottom: 30px;
+}
+.permis__card--content li {
+  display: grid;
+  align-items: start;
+  grid-template-columns: 4% 90%;
+  gap: 8px;
+  font-size: 20px;
+}
+.permis__card--content li svg {
+  width: 18px;
+  height: 18px;
+  max-height: 18px;
+  max-width: 18px;
+  min-height: 18px;
+  min-width: 18px;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  margin-top: 6px;
+}
+.permis__card--content span {
+  text-align: end;
+  font-size: 35px;
+  font-weight: 800;
+  padding: 0;
+}
+.permis .separator {
+  width: 100%;
+  height: 1px;
+  background-color: #FFFFFF;
+  margin-top: 20px;
+  margin-bottom: 32px;
+  padding-bottom: 0;
+  padding-right: 0;
   display: block;
-  line-height: 1.5;
-}
-.permis__description > div {
-  margin-block: 20px;
-}
-.permis__description span {
-  display: block;
-}
-.permis__description p, .permis__description span {
-  padding: 0 40px 0 0;
-}
-.permis__description--left {
-  border-bottom: 1px solid #FFFFFF;
-  border-radius: 5px;
 }
 .permis .cta {
   margin: 20px 0;
+  justify-content: center;
 }
 .permis__price {
   font-size: 30px;
@@ -1121,7 +1208,7 @@ button, .cta {
   place-items: center;
   text-align: center;
   line-height: 1.3;
-  margin: -8rem 0 0;
+  margin: -10rem 0 0;
   background: #F2E205;
   color: #D93513;
 }
@@ -1133,6 +1220,18 @@ button, .cta {
   text-align: center;
   margin-top: 20px;
   color: #D93513;
+}
+.contact__left ul {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+.contact__left ul li a {
+  display: flex;
+  flex-direction: column;
+}
+.contact__left ul .cta {
+  margin: auto;
 }
 .contact__left svg {
   margin-left: 10px;
@@ -1151,6 +1250,10 @@ button, .cta {
   padding: 15px 25px;
   margin-block: 20px;
   color: #D93513;
+}
+.contact__card a {
+  display: flex;
+  flex-direction: column;
 }
 .contact__form form {
   padding: 70px;
@@ -1229,8 +1332,11 @@ button, .cta {
 /* Small devices */
 @media (max-width: 380px) {
   .nav__cta {
-    font-size: 12px;
+    font-size: 10px;
     justify-content: center;
+  }
+  .agences__content a {
+    min-width: auto;
   }
   .permis h2 {
     font-size: 35px;
@@ -1265,6 +1371,11 @@ button, .cta {
   }
 }
 /* Medium devices */
+@media (max-width: 600px) {
+  .header {
+    padding: 18px 10px;
+  }
+}
 @media (min-width: 640px) {
   .hero__container,
   .formation__container,
@@ -1278,10 +1389,8 @@ button, .cta {
     grid-template-columns: repeat(2, max-content);
   }
 }
+/* Tablet */
 @media (min-width: 767px) {
-  .header {
-    height: 140px;
-  }
   .hero__subtitle {
     font-size: 4rem;
   }
@@ -1332,11 +1441,22 @@ button, .cta {
   .agences__content {
     min-height: 220px;
   }
+  .agences__content a {
+    min-width: 350px;
+  }
   .permisPresentation {
     padding-top: 6rem;
   }
   .contact__left div {
     padding: 3rem;
+  }
+  .footer {
+    padding-block: 40vh 2rem;
+  }
+  .footer__insta {
+    top: 3%;
+    left: 30vw;
+    width: 35vw;
   }
   .footer h4 {
     font-size: 3.5vw;
@@ -1376,6 +1496,9 @@ button, .cta {
     top: 0;
     height: 50vh;
   }
+  .nav__logo img {
+    max-width: 120px;
+  }
   .contact__left {
     padding: 13rem 0 5rem;
   }
@@ -1398,6 +1521,9 @@ button, .cta {
     grid-column-end: 4;
     grid-row-start: 1;
   }
+  .nav__logo img {
+    width: 120px;
+  }
   .nav__menu {
     grid-column-start: 1;
     grid-column-end: 3;
@@ -1412,6 +1538,11 @@ button, .cta {
   .nav__link {
     font-size: 1rem;
   }
+  /* Change background header */
+  .bg-header {
+    top: 5%;
+    transform: scale(0.9);
+  }
   .section {
     padding-block: 6rem 1.5rem;
   }
@@ -1423,13 +1554,34 @@ button, .cta {
     transform: rotate(-20deg);
   }
   .footer {
-    padding-block: 8rem 3rem;
+    padding-block: 50vh 2rem;
+  }
+  .footer__insta {
+    top: 3%;
+    left: 30vw;
+    width: 30vw;
+  }
+  .footer__insta span {
+    font-size: 4vw;
   }
   .footer h4 {
     font-size: 3vw;
   }
   .footer__after span {
     font-size: 9vw;
+  }
+  .permisPresentation {
+    margin-top: -20vh;
+    padding-top: 12rem;
+  }
+  .permis__wrapper {
+    grid-template-columns: 50% 50%;
+  }
+  .permis__card {
+    padding: 2rem;
+  }
+  .evaluation__wrapper {
+    grid-template-columns: 20% 60% 20%;
   }
   .contact {
     display: grid;
@@ -1453,11 +1605,6 @@ button, .cta {
   .container {
     margin-inline: auto;
   }
-  .nav {
-    max-width: 1300px;
-    height: 5rem;
-    column-gap: 3rem;
-  }
   .nav__toggle, .nav__close {
     display: none;
   }
@@ -1465,8 +1612,10 @@ button, .cta {
     flex-direction: row;
     column-gap: 3rem;
   }
-  .nav__menu {
-    margin-left: auto;
+  .agences__content a {
+    min-width: 500px;
+    max-width: 650px;
+    padding: 60px;
   }
 }
 
