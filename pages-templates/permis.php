@@ -177,7 +177,7 @@
     <h2 class="section__title preparation__title">Se préparer à l'examen</h2>
     <ul class="preparation__description">
       <li>Télécharger la liste des vérifications techniques et des questions en lien avec la sécurité routière
-        <a href="<?php echo home_url(); ?>/wp-content/uploads/VERIF-INT-ET-EXT-1.pdf">
+        <a href="<?php echo home_url(); ?>/wp-content/uploads/VERIF-INT-ET-EXT-1.pdf" download>
           <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="#000000" viewBox="0 0 256 256">
             <path d="M205.66,149.66l-72,72a8,8,0,0,1-11.32,0l-72-72a8,8,0,0,1,11.32-11.32L120,196.69V40a8,8,0,0,1,16,0V196.69l58.34-58.35a8,8,0,0,1,11.32,11.32Z"></path>
           </svg>
