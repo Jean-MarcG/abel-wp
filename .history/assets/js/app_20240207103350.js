@@ -16,7 +16,6 @@ if(navToggle){
         navMenu.classList.add('show-menu')
     })
 }
-
 /*===== MENU HIDDEN =====*/
 /* Validate if constant exists */
 if(navClose){
@@ -45,7 +44,6 @@ const scrollHeader = () =>{
 window.addEventListener('scroll', scrollHeader)
 
 /*=============== SHOW SCROLL UP ===============*/
-
 const scrollUp = () =>{
     const scrollUp = document.getElementById('scroll-up')
     // When the scroll is higher than 350 viewport height, add the show-scroll class to the a tag with the scrollup class
@@ -65,7 +63,7 @@ const sr = ScrollReveal({
 })
 
 sr.reveal('.hero__container, .formation__container, .package__title, .package__subtitle, .forward__container, .agences, .footer__before, .footer__after', {origin: 'bottom'})
-sr.reveal('.permisPresentation__title, .permisPresentation__description', {origin: 'bottom'})
+sr.reveal('.permisPresentation__title, .permisPresentation__description, .documents__title, .documents__description, .preparation__title, .preparation__description, .contact__left, .contact__right', {origin: 'bottom'})
 sr.reveal('.package__card--left, .permis__description--left', {origin: 'left'})
 sr.reveal('.package__card--right, .permis__description--right', {origin: 'right'})
 

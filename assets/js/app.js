@@ -63,7 +63,7 @@ const sr = ScrollReveal({
 })
 
 sr.reveal('.hero__container, .formation__container, .package__title, .package__subtitle, .forward__container, .agences, .footer__before, .footer__after', {origin: 'bottom'})
-sr.reveal('.permisPresentation__title, .permisPresentation__description, .documents__title, .documents__description, .contact__left, .contact__right', {origin: 'bottom'})
+sr.reveal('.permisPresentation__title, .permisPresentation__description, .documents__title, .documents__description, .preparation__title, .preparation__description, .contact__left, .contact__right', {origin: 'bottom'})
 sr.reveal('.package__card--left, .permis__description--left', {origin: 'left'})
 sr.reveal('.package__card--right, .permis__description--right', {origin: 'right'})
 
