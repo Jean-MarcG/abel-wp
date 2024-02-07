@@ -220,7 +220,21 @@
     letter-spacing: 2px;
   }
 
-  & li {
-    list-style: disc;
+  &__description {
+    li {
+      list-style: disc;
+    }
+
+    a {
+      position: relative;
+
+      & svg {
+        position: absolute;
+        top: -35px;
+        right: -20px;
+        rotate: 29deg;
+      }
+    }
   }
+
 }
